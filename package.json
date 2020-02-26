@@ -1,0 +1,26 @@
+{
+  "name": "workout-log-new",
+  "version": "1.0.0",
+  "description": "Homework 17- Mongoose, Express Router, etc.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhitchi/workout-log-new.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhitchi/workout-log-new/issues"
+  },
+  "homepage": "https://github.com/mhitchi/workout-log-new#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2"
+  }
+}
