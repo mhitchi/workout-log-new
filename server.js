@@ -18,8 +18,11 @@ mongoose.Promise = global.Promise;
 
 // Use express router to register routes as middleware
 app.use('/api/activity', require('./routes/activity'))
+app.use('/api/exercise', require('./routes/exercise'))
+app.use('/api/workout', require('./routes/workout'));
 
 // STUDENTS: REGISTER ROUTES TO HANDLE WORKOUT AND EXERCISE API CALLS
+
 
 
 app.listen(PORT, () => {
