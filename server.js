@@ -12,7 +12,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+//connect to mongodb
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mongofitness", dbconfig.settings);
+mongoose.Promise = global.Promise;
 
 // Use express router to register routes as middleware
 app.use('/api/activity', require('./routes/activity'))

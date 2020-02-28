@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
+const Exercise = require("../models/exerciseModel");
+
 const ExerciseCntrl = require('../controllers/exerciseCntrl');
 
 // GET  "/""
@@ -12,7 +14,7 @@ router.get("/", (req, res) => {
   res.sendFile("./public/index.html");
 })
 
-//get exercise 
+//get all exercises 
 //TODO not working?
 router.get("/api/exercise", (req, res) => {
   db.Exercise.find({})
@@ -27,13 +29,18 @@ router.get("/api/exercise", (req, res) => {
 //post exercise
 //TODO not working?
 router.post("/api/exercise", (req, res) => {
-  db.Exercise.create(req.body)
-    .then(dbExercise => {
-      res.json(dbExercise);
+  Exercise.create(res.body)
+    .then(exercise => {
+      res.send(exercise)
     })
-    .catch(err => {
-      res.json(err);
-    });
+
+  // db.Exercise.create(req.body)
+  //   .then(dbExercise => {
+  //     res.json(dbExercise);
+  //   })
+  //   .catch(err => {
+  //     res.json(err);
+  //   });
 });
 
 //add exercise to plan
