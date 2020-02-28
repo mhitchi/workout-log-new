@@ -4,14 +4,15 @@ const ActivitySchema = require('./activityModel');
 
 const WorkoutSchema = new Schema({
   date: {
-    type: Date
+    type: Date,
+    default: Date.now
   },
   name: {
     type: String,
     trim: true,
     required: "Enter an Workout name"
   },
-  activities: [{ type: Schema.Types.String, ref: 'Activity' }]
+  activity: [{ type: Schema.Types.String, ref: 'Activity' }]
 });
 
 const Workout = mongoose.model("Workout", WorkoutSchema);

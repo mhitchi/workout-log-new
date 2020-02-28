@@ -1,3 +1,4 @@
 module.exports = {
-  ExerciseCntrl: require('./exerciseCntrl')
+  ExerciseCntrl: require('./exerciseCntrl'),
+  WorkoutCntrl: require('./workoutCntrl')
 };

@@ -1,15 +1,15 @@
 const express = require('express')
 const router = express.Router()
 
-const Workout = require("../models/workoutModel");
-
 const WorkoutCntrl = require('../controllers/workoutCntrl');
 
-// GET /api/workout get all workouts
-// TODO note working
+// GET / get all workouts
 router.get("/", WorkoutCntrl.getAll);
 
-// POST /api/workout save selected workout
+// POST / save selected workout
 router.post("/", WorkoutCntrl.makeWorkout);
+
+// GET /:id? get workout by id
+router.get("/:id?", WorkoutCntrl.getWorkout);
 
 module.exports = router

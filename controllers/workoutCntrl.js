@@ -13,11 +13,24 @@ const WorkoutCntrl = {
     });
   },
 
+  //make one workout
   makeWorkout({body}, res){
-    Workout.create(body)
-    .then(workout => {
-      res.json(workout)
+    Workout.create(body, (err, res) => {
+      console.log(res);
+      res.json(res)
     })
+    .catch(err => {
+      console.log(err);
+      res.json(err)
+    });
+  },
+
+  //TODO get one by id
+  getWorkout(req, res) {
+    Workout.findById({})
+    .then(data => {
+      res.json(data);
+    });
   }
 }
 
