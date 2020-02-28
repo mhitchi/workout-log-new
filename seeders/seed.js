@@ -10,7 +10,7 @@ let workoutSeed = [
   //name, duration, weight, reps, sets, distance
   {
     name: "workout01",
-    day: new Date().setDate(new Date().getDate()-3),
+    day: Date.now,
     activity: [
       {
         exercise: "Bicep Curl",
@@ -36,7 +36,7 @@ let workoutSeed = [
   },
   {
     name: "workout02",
-    day: new Date().setDate(new Date().getDate()-2),
+    day: Date.now,
     activity: [
       {
         exercise: "Squat",
