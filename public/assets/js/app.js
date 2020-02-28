@@ -42,14 +42,13 @@ $(document).ready(function(){
         li.attr("data-activity-id", activity._id);
       
       let html = ` 
-        <span>${activity.name}</span> <br/>
+        <span>${activity.exercise}</span> <br/>
         Duration: ${activity.duration} <br/>
         Weight: ${activity.weight} <br/>
         Reps: ${activity.reps} <br/>
         Sets: ${activity.sets} <br/>
         Distance: ${activity.distance}
       `;
-
       li.append(html);
       ul.append(li);
     });

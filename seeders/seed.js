@@ -9,9 +9,9 @@ mongoose.connect("mongodb://localhost/mongofitness", {
 let workoutSeed = [
   //name, duration, weight, reps, sets, distance
   {
-    name: "workout01",
     day: Date.now,
-    activity: [
+    name: "workout01",
+    activities: [
       {
         exercise: "Bicep Curl",
         type: "weight",
@@ -35,9 +35,9 @@ let workoutSeed = [
     ]
   },
   {
-    name: "workout02",
     day: Date.now,
-    activity: [
+    name: "workout02",
+    activities: [
       {
         exercise: "Squat",
         type: "weight",
