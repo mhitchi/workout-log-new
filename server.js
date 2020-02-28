@@ -18,8 +18,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mongofitness", 
 app.use('/api/activity', require('./routes/activity'))
 
 // STUDENTS: REGISTER ROUTES TO HANDLE WORKOUT AND EXERCISE API CALLS
-// api/exercise
-// api/workout
 
 
 app.listen(PORT, () => {
