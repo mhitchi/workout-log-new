@@ -67,6 +67,30 @@ let workoutSeed = [
   }
 ];
 
+const exerciseSeed = [
+  {
+    name: "Bicep Curl"
+  },
+  {
+    name: "Lateral Pull"
+  },
+  {
+    name: "Squat"
+  },
+  {
+    name: "Burpee"
+  },
+  {
+    name: "Kettlebell Swing"
+  },
+  {
+    name: "Stairmaster"
+  },
+  {
+    name: "Running"
+  }
+]
+
 db.Workout.deleteMany({})
   .then(() => db.Workout.collection.insertMany(workoutSeed))
   .then(data => {
@@ -77,3 +101,8 @@ db.Workout.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+
+db.Exercise.insertMany(exerciseSeed, function(err, res) {
+  if(err){console.log(err)}
+  else{console.log(res)}
+});
