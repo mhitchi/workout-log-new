@@ -17,16 +17,16 @@ router.get("/", (req, res) => {
 })
 
 //get all exercises 
-//TODO not working?
-// router.get("/api/exercise", (req, res) => {
-//   Exercise.find({})
-//     .then(dbExercise => {
-//       res.json(dbExercise);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
+// TODO not working?
+router.get("/api/exercise", (req, res) => {
+  Exercise.find({})
+    .then(dbExercise => {
+      res.json(dbExercise);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
 
 //post exercise
 //TODO not working?
