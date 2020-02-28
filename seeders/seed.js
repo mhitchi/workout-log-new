@@ -9,24 +9,25 @@ mongoose.connect("mongodb://localhost/mongofitness", {
 let workoutSeed = [
   //name, duration, weight, reps, sets, distance
   {
+    name: "workout01",
     day: new Date().setDate(new Date().getDate()-3),
     activity: [
       {
-        name: "Bicep Curl",
+        exercise: "Bicep Curl",
         type: "weight",
         weight: 15,
         reps: 12,
         sets: 3
       },
       {
-        name: "Lateral Pull",
+        exercise: "Lateral Pull",
         type: "resistance",
         weight: 45,
         reps: 12,
         sets: 3
       },
       {
-        name: "Running",
+        exercise: "Running",
         type: "cardio",
         incline: 3,
         duration: 30
@@ -34,30 +35,31 @@ let workoutSeed = [
     ]
   },
   {
+    name: "workout02",
     day: new Date().setDate(new Date().getDate()-2),
     activity: [
       {
-        name: "Squat",
+        exercise: "Squat",
         type: "weight",
         weight: 100,
         reps: 12,
         sets: 3
       },
       {
-        name: "Kettlebell Swing",
+        exercise: "Kettlebell Swing",
         type: "weight",
         weight: 30,
         reps: 12,
         sets: 3
       },
       {
-        name: "Burpee",
+        exercise: "Burpee",
         type: "plyo",
         reps: 10,
         sets: 3
       },
       {
-        name: "Stairmaster",
+        exercise: "Stairmaster",
         type: "cardio",
         duration: 30
       },

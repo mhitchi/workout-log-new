@@ -42,7 +42,7 @@ $(document).ready(function(){
         li.attr("data-activity-id", activity._id);
       
       let html = ` 
-        <span>${activity.exercise}</span> <br/>
+        <span>${activity.name}</span> <br/>
         Duration: ${activity.duration} <br/>
         Weight: ${activity.weight} <br/>
         Reps: ${activity.reps} <br/>
